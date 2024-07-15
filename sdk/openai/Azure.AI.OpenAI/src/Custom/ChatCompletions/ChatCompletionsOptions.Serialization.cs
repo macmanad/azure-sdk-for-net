@@ -162,6 +162,12 @@ public partial class ChatCompletionsOptions : IJsonModel<ChatCompletionsOptions>
                 writer.WriteObjectValue<ChatCompletionsToolDefinition>(item, options);
             }
             writer.WriteEndArray();
+
+            if (Optional.IsDefined(ParallelToolCalls))
+            {
+                writer.WritePropertyName("parallel_tool_calls"u8);
+                writer.WriteBooleanValue(ParallelToolCalls.Value);
+            }
         }
         if (Optional.IsDefined(ToolChoice))
         {
