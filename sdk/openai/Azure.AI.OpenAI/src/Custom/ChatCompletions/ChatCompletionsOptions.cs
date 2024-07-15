@@ -212,6 +212,7 @@ public partial class ChatCompletionsOptions
     // signatures for the different request types (i.e. streaming versus non-streaming methods).
 
     internal bool? InternalShouldStreamResponse { get; set; }
+    public bool? ParallelToolCalls { get; set; }
 
     // CUSTOM CODE NOTE:
     // Add a parameterized constructor that receives the deployment name as a parameter in addition

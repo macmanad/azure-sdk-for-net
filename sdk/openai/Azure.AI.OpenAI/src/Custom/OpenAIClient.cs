@@ -336,6 +336,7 @@ public partial class OpenAIClient
         scope.Start();
 
         chatCompletionsOptions.InternalShouldStreamResponse = null;
+        chatCompletionsOptions.ParallelToolCalls = false;
 
         RequestContent content = chatCompletionsOptions.ToRequestContent();
         RequestContext context = FromCancellationToken(cancellationToken);
@@ -373,6 +374,7 @@ public partial class OpenAIClient
         scope.Start();
 
         chatCompletionsOptions.InternalShouldStreamResponse = null;
+        chatCompletionsOptions.ParallelToolCalls = false;
 
         RequestContent content = chatCompletionsOptions.ToRequestContent();
         RequestContext context = FromCancellationToken(cancellationToken);
@@ -420,6 +422,7 @@ public partial class OpenAIClient
         scope.Start();
 
         chatCompletionsOptions.InternalShouldStreamResponse = true;
+        chatCompletionsOptions.ParallelToolCalls = false;
 
         RequestContent content = chatCompletionsOptions.ToRequestContent();
         RequestContext context = FromCancellationToken(cancellationToken);
@@ -477,6 +480,7 @@ public partial class OpenAIClient
         scope.Start();
 
         chatCompletionsOptions.InternalShouldStreamResponse = true;
+        chatCompletionsOptions.ParallelToolCalls = false;
 
         RequestContent content = chatCompletionsOptions.ToRequestContent();
         RequestContext context = FromCancellationToken(cancellationToken);
